@@ -1,0 +1,54 @@
+{
+  "name": "skye",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bcrypt-nodejs": "0.0.3",
+    "ejs": "2.5.6",
+    "google-auth-library": "^0.10.0",
+    "grunt": "1.0.1",
+    "grunt-contrib-clean": "1.1.0",
+    "grunt-contrib-coffee": "1.0.0",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-cssmin": "2.2.0",
+    "grunt-contrib-jst": "1.0.0",
+    "grunt-contrib-less": "1.4.1",
+    "grunt-contrib-uglify": "3.0.1",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-sails-linker": "~1.0.4",
+    "grunt-sync": "0.6.2",
+    "haversine": "^1.0.0",
+    "include-all": "~4.0.3",
+    "lodash": "^4.13.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "rc": "1.2.1",
+    "sails": "~0.12.2",
+    "sails-disk": "~0.10.9",
+    "sails-hook-email": "^0.12.1",
+    "sails-memory": "^0.10.7",
+    "sails-mysql": "^0.11.5",
+    "secure-random": "^1.1.1",
+    "skipper": "^0.8.2",
+    "skipper-disk": "^0.5.4",
+    "synchronize": "^2.0.0"
+  },
+  "scripts": {
+    "debug": "node debug app.js",
+    "start": "node app.js"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephen/skye.git"
+  },
+  "author": "stephen&biwizdibro",
+  "license": "",
+  "devDependencies": {
+    "grunt-forever": "^0.4.7"
+  }
+}

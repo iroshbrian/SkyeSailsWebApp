@@ -1,0 +1,109 @@
+/**
+ * BusinessDetails.js
+ *
+ * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
+ */
+
+module.exports = {
+
+	attributes: {
+
+		name: {
+			type: 'string',
+			required: true
+		},
+
+		contactNo: {
+			type: 'string',
+			required: true,
+		},
+
+		lat: {
+			type: 'float',
+			required: true
+		},
+
+		lng: {
+			type: 'float',
+			required: true
+		},
+
+		locationName: {
+			type: 'string'
+		},
+
+		address: {
+			type: 'string'
+		},
+
+		logoUrl: {
+			type: 'string',
+			defaultsTo:	""
+		},
+
+		logoFd: {
+			type: 'string'
+		},
+
+		bannerUrl: {
+			type: 'string'
+		},
+
+		bannerFd: {
+			type: 'string'
+		},
+
+		active: {
+			type: 'boolean',
+			defaultsTo: false
+		},
+
+		/* relationships */
+		user: {
+			model: 'user',
+			unique: true
+		},
+
+		// categories
+		categories: {
+			collection: 'category',
+			via: 'owner'
+		},
+
+		// Keywords
+		keywords: {
+			collection: 'keyword',
+			via: 'owner'
+		},
+
+		// social media
+		socialMedia: {
+			collection: 'socialMediaAssoc',
+			via: 'owner'
+		},
+
+		// Events
+		events: {
+			collection: 'event',
+			via: 'owner'
+		},
+
+		// Working hours
+		workingHours: {
+			collection: 'workingHours',
+			via: 'owner'
+		},
+
+		// contact details
+		contact: {
+			collection: 'contact',
+			via: 'owner'
+		},
+
+		paymentMethods: {
+			collection: 'paymentMethodAssoc',
+			via: 'owner'
+		}
+	}
+};

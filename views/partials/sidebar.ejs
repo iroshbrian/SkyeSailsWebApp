@@ -1,0 +1,52 @@
+<!-- Left navbar-header -->
+<div class="navbar-default sidebar page-sidebar" role="navigation" ng-controller="AppController">
+    <div class="sidebar-nav navbar-collapse slimscrollsidebar">
+        <div class="user-profile">
+            <div class="dropdown user-pro-body m-l-15">
+                <!-- <div><img src="../plugins/images/users/varun.jpg" alt="user-img" class="img-circle"></div> --> 
+                <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {{user.name}} <!-- <span class="caret"></span> --></a>
+               <!--  <ul class="dropdown-menu animated flipInY">
+                    <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                    <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="login.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                </ul> -->
+            </div>
+        </div>
+        <ul class="page-sidebar-menu nav" id="side-menu">
+            <li class="sidebar-search hidden-sm hidden-md hidden-lg">
+                <!-- input-group -->
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Search..."> <span class="input-group-btn">
+            <button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button> 
+
+            </span> </div>
+                <!-- /input-group -->
+
+            </li>
+            <li class="nav-small-cap m-t-10" style="margin-left:0 !important;font-weight:bold;">PROFILE</li>
+    
+            <li><a ui-sref="blank" class="active waves-effect"><span class="hide-menu">Blank</span></a></li>
+            <li><a ui-sref="dashboard" class="waves-effect"><span class="hide-menu">Dashboard</span></a></li>
+            <li><a ui-sref="my_businesses" class="waves-effect"><span class="hide-menu">My Businesses</span></a></li>
+            <li><a ui-sref="my_events" class="waves-effect"><span class="hide-menu">My Events</span></a></li>
+
+            <li><a ui-sref="blank" class="waves-effect"><span class="hide-menu">My Statistics</span></a></li>
+
+            <li class="nav-small-cap m-t-10" style="margin-left:0 !important;font-weight:bold;">MORE</li>
+            <li><a ui-sref="my_posts" class="waves-effect"><span class="hide-menu">My Posts</span></a></li>
+            <li><a ui-sref="keywords" class="waves-effect"><span class="hide-menu">Keywords</span></a></li>
+            <li><a ui-sref="working_hours" class="waves-effect"><span class="hide-menu">Working Hours</span></a></li>
+            <li><a ui-sref="payment_methods" class="waves-effect"><span class="hide-menu">Payment methods</span></a></li>
+            <li><a ui-sref="social_media" class="waves-effect"><span class="hide-menu">Social Media</span></a></li>
+            <li><a ui-sref="contact_details" class="waves-effect"><span class="hide-menu">Contacts</span></a></li>
+            <li><a ui-sref="help" class="waves-effect"><span class="hide-menu">Help</span></a></li>
+            <li><a ui-sref="blank" class="waves-effect"><span class="hide-menu">Settings</span></a></li>
+            <li><a ui-sref="blank" class="waves-effect"><span class="hide-menu">Logout</span></a></li>
+        </ul>
+    </div>
+</div>
+<!-- Left navbar-header end -->

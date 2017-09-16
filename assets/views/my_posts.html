@@ -1,0 +1,116 @@
+
+<div class="row" ng-controller="BlankController">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">My Posts</h4> </div>
+            <ol class="breadcrumb">
+                <li><a href="#">Dashboard</a></li>
+                <li class="active">My Posts</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="white-box p-0">
+                <!-- .left-right-aside-column-->
+                <div class="page-aside">
+                    <!-- .left-aside-column-->
+                    <div class="left-aside">
+                        <div class="scrollable">
+                            <ul class="list-style-none">
+                                <li class="box-label"><a href="javascript:void(0)">All Posts </a></li>
+                                <li class="divider"></li>
+                                <li class="active"><a href="javascript:void(0)">Happy Hour <span>103</span></a></li>
+                                <li><a href="javascript:void(0)">Today's Menu <span>19</span></a></li>
+                                <li><a href="javascript:void(0)">Cocktails <span>623</span></a></li>
+                                <li><a href="javascript:void(0)">Last Call <span>53</span></a></li>
+                                <li class="box-label"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">+ Create New Post</a></li>
+                                <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h4 class="modal-title" id="myModalLabel">Add Post Title</h4> </div>
+                                            <div class="modal-body">
+                                                <from class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12">Title</label>
+                                                        <div class="col-md-12">
+                                                            <input type="text" class="form-control" placeholder="Title name"> </div>
+                                                    </div>
+                                                </from>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.left-aside-column-->
+                    <div class="right-aside">
+                        <h3 class="box-title m-b-0" style="font-weight:600;">Your Posts</h3> <small>You can edit content from your previous posts below.</small>
+                        <hr style="border-color:#000;">
+                        <div class="row">
+                            <div class="click2edit m-b-10 m-l-10">Long Island @ 400. between 4:00PM and 8:00PM</div> 
+                            <div class="m-b-20 pull-right">
+                                <a id="edit" class="btn btn-info btn-rounded" onclick="edit()" type="button">Edit</a> 
+                                <a id="save" class="btn btn-success btn-rounded" onclick="save()" type="button">Save</a>
+                            </div>
+                        </div>
+
+                        <hr>
+
+
+                        <div class="m-b-40"></div>
+
+                        <h3 class="box-title m-b-0" style="font-weight:600;">New Content</h3> <small>You can add content to your posts below.</small>
+                        <hr style="border-color:#000;">
+
+                        <div class="summernote">
+                            <h3>Add Post Content</h3> 
+                        </div>
+
+                               
+                    </div>
+                    <!-- .left-aside-column-->
+                </div>
+                <!-- /.left-right-aside-column-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        jQuery(document).ready(function () {
+            $('.summernote').summernote({
+                height: 250, // set editor height
+                minHeight: null, // set minimum height of editor
+                maxHeight: null, // set maximum height of editor
+                focus: false // set focus to editable area after initializing summernote
+            });
+            $('.inline-editor').summernote({
+                airMode: true
+            });
+        });
+        window.edit = function () {
+            $(".click2edit").summernote()
+        }, window.save = function () {
+            $(".click2edit").summernote('destroy');
+        }
+
+        window.edit2 = function () {
+            $(".click2edit").summernote()
+        }, window.save2 = function () {
+            $(".click2edit").summernote('destroy');
+        }
+    </script>
+
+
+

@@ -1,0 +1,82 @@
+  
+  <meta name="google-signin-client_id" content="492515439762-mo3vnbd3dqfia5kt36lt25cqf6hj43rb.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+  <section id="wrapper" class="login-register">
+    <div class="login-box login-sidebar">
+      <div class="white-box" style="position:absolute;top:16%;">
+        <form class="form-horizontal form-material" id="loginform" action="">
+          <a href="javascript:void(0)" class="text-center db">
+
+            <img src="/images/primary.png" alt="Home" />
+          </a>  
+
+          <div class="form-group text-center m-t-20">
+            <div class="col-xs-12">
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+              <!-- BEGIN ACTUAL CONTENT -->
+              <div style="margin-left:33%;">
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+              </div>
+              <!-- END ACTUAL CONTENT -->
+            </div>
+          </div>
+          <div class="form-group m-t-40 m-b-0 m-r-10">
+            <div class="col-sm-12 text-center">
+              <p>Don't have an account? <a href="" class="text-primary m-l-5" style="color:#3399FF;"><b>Download Skye App </b></a>from Google Playstore and Create A Business Account</p>
+            </div>
+          </div>
+          <a href="#" onclick="signOut();">Sign out</a>
+        </form>
+      </div>
+    </div>
+
+    <!-- BEGIN FOOTER -->
+      <footer style="position: absolute;left: 70.7%;" class="footer text-center"> 2017 &copy; Skye Tech Group </footer>
+    <!-- END FOOTER -->
+  </section>
+
+  <script>
+    function onSignIn(googleUser) {
+      var token = googleUser.getAuthResponse().id_token;
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'http://localhost:8123/signin?token=' + token);
+      //xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.onload = function() {
+        console.log('Signed in as: ' + xhr.responseText);
+
+        var data= xhr.responseText;
+        var user=$.parseJSON(data);
+        var user=user.user;
+
+        sessionStorage.setItem("name",user.display_name);
+        sessionStorage.setItem("photo",user.photo);
+        sessionStorage.setItem("id",user.id);
+        sessionStorage.setItem("email",user.email);
+
+
+        window.location.href = "/index";
+      };
+      xhr.send('token=' + token);
+
+    }
+
+    
+
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+</script>
+
+
+
+

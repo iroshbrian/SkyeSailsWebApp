@@ -1,0 +1,68 @@
+
+<div class="row" ng-controller="DashboardController">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Dashboard </h4> </div>
+            <ol class="breadcrumb">
+                <li><a href="#">Dashboard</a></li>
+                <li class="active">Client Dashboard</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-md-9 col-lg-8 col-sm-6 col-xs-12">
+            <!-- <div class="white-box" style="background-image:url(../assets/images/java-house-5.jpg);background-position:center; height:350px;"> -->
+                <img src="../assets/images/java-house-5.jpg" alt="">
+        </div>
+        <div class="col-md-3 col-lg-4 col-sm-6 col-xs-12">
+            <div class="white-box">
+                <h3 class="box-title">Top Viewed Posts</h3>
+                <ul class="basic-list">
+                    <li>Google Chrome <span class="pull-right label-danger label">21.8%</span></li>
+                    <li>Mozila Firefox <span class="pull-right label-purple label">21.8%</span></li>
+                    <li>Apple Safari <span class="pull-right label-success label">21.8%</span></li>
+                    <li>Internet Explorer <span class="pull-right label-info label">21.8%</span></li>
+                    <li>Opera mini <span class="pull-right label-warning label">21.8%</span></li>
+                    <li>Mozila Firefox <span class="pull-right label-purple label">21.8%</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- row -->
+    <div class="row">
+        <div class="col-md-3 col-xs-12 col-sm-6">
+            <div class="white-box text-center bg-info">
+                <h1 class="text-white counter m-b-0 m-t-0">{{date | date:'dd'}}</h1>
+                <h5 class="text-white m-b-0 m-t-0">{{date | date:'MMMM'}}</h5>
+                <p class="m-b-15 text-white">{{date | date:'yyyy'}}</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-12 col-sm-6">
+            <div class="white-box text-center bg-purple">
+                <h1 class="text-white counter">2065</h1>
+                <p class="text-white">counters</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-12 col-sm-6">
+            <div class="white-box text-center">
+                <h1 class="counter">465</h1>
+                <p class="text-muted">counters</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-12 col-sm-6">
+            <div class="white-box text-center bg-success">
+                <h1 class="text-white counter">6555</h1>
+                <p class="text-white">counters</p>
+            </div>
+        </div>
+    </div>
+    <!-- /row -->
+
+</div>
+
+
+
+   
+
